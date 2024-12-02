@@ -6,8 +6,8 @@ st.set_page_config(
     layout="wide",  # Menggunakan lebar penuh layar
     initial_sidebar_state="expanded"  # Sidebar terbuka secara default
 )
-tab = st.tabs(["Lingkungan di Sekitarku","Menjaga Lingkungan Sekitar"])
-
+st.image("https://res.cloudinary.com/ikip-siliwangi/image/upload/v1733135017/fives_epdalm.png",width=200)
+tab = st.tabs(["Lingkungan di Sekitarku","Menjaga Lingkungan Sekitar","Numerasi"])
 with tab[0]:
     st.image("https://res.cloudinary.com/ikip-siliwangi/image/upload/v1732279393/ayo_bacalah_ohjve1.png")
     with st.container(border=True):
@@ -163,6 +163,29 @@ with tab[0]:
 </html>
     '''
     st.components.v1.html(tulisan_html,width=1100,height=700)
+    tulisan_css1='''
+<style>
+    #tombol{
+        width:200px;
+        height:100px;
+        transform:rotate(0deg)
+    }
+    #tombol:hover{
+        animation:gerak 4s ease-in-out infinite;
+    }
+    @keyframes gerak{
+        0%,100%{transform:rotate(60deg);}
+        25%,75%{transform:rotate(0deg);}
+        50%{transform:rotate(-60deg);}
+    }
+</style>
+'''
+    st.markdown(tulisan_css1,unsafe_allow_html=True)
+    st.markdown('''
+<img id="tombol" src="https://res.cloudinary.com/ikip-siliwangi/image/upload/v1732179623/soal_test_p9lghr.png">
+</img>
+''',unsafe_allow_html=True)
+    
 with tab[1]:
     css_code = """
     <style>
@@ -253,28 +276,6 @@ with tab[1]:
     begitu, kita ikut menjaga bumi agar tetap sehat dan bersih untuk masa depan.
     </p>
     """, unsafe_allow_html=True)
-tulisan_css1='''
-<style>
-    #tombol{
-        width:200px;
-        height:100px;
-        transform:rotate(0deg)
-    }
-    #tombol:hover{
-        animation:gerak 4s ease-in-out infinite;
-    }
-    @keyframes gerak{
-        0%,100%{transform:rotate(60deg);}
-        25%,75%{transform:rotate(0deg);}
-        50%{transform:rotate(-60deg);}
-    }
-</style>
-'''
-st.markdown(tulisan_css1,unsafe_allow_html=True)
-st.markdown('''
-<img id="tombol" src="https://res.cloudinary.com/ikip-siliwangi/image/upload/v1732179623/soal_test_p9lghr.png">
-</img>
-''',unsafe_allow_html=True)
 buka = st.button("Tampilkan Soal")
 tulisan_html1='''
 <!DOCTYPE html>
@@ -432,3 +433,245 @@ tulisan_html1='''
 '''
 if buka:
     st.components.v1.html(tulisan_html1,width=1000,height=2000)
+
+
+with tab[2]:
+    tuliskan_html5='''
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding:10px;
+            background-color:lightgray
+        }
+        .judul{
+            font-family:"bauhaus 93";
+            font-size:20px;
+            font-weight:bold;
+        }
+        .bagian{
+            font-size:30px;
+            color:blue;
+            text-shadow:2px 2px 2px red;
+        }
+        .bagian1{
+            margin:3px;
+            color:green;
+            font-weight:bold;
+        }
+        .ident{
+            border: 2px solid black;
+            border-radius:5px;
+            width:300px;
+            height:30px;
+            box-shadow:2px 2px 2px 2px orange;
+        }
+        #identitas{
+            padding:5px;
+            border:2px solid black;
+            border-radius:3px;
+            box-shadow:2px 2px 2px 2px yellow;
+            margin:5px;
+            background-color:mistyrose
+        }
+        #petunjuk{
+            border: 2px solid black;
+            border-radius:5px;
+            background-color:cyan;
+            padding:5px;
+            font-size:18px;
+            text-align:justify;
+        }
+        .bagian2{
+            color:brown;
+            font-weight:bold;
+            font-size:20px;
+            margin:5px;
+        }
+        ul li{
+            margin:3px;
+            font-size:20px;
+        }
+        .bagian3{
+            border:3px solid black;
+            border-radius:10px;
+            box-shadow:2px 2px 2px 2px green;
+        }
+        #kirim1{
+            font-family:nroadway;
+            font-size:20px;
+            background-color:green;
+            color:yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="judul bagian">Tugas Numerasi: Menjaga Lingkungan Sekitar Kita</div>
+    <div id="identitas">
+        <div class="bagian1" id="nama">Nama: <input class="ident" type="text"></div>
+        <div class="bagian1" id="kelas">Kelas: <input class="ident" type="text"></div>
+    </div>
+    <div class="judul">Petunjuk</div>
+    <div id="petunjuk">Bacalah teks <b><i>“Lingkungan di Sekitarku”</i></b> untuk memahami lebih baik cara menjaga 
+        lingkungan. Jawablah setiap soal berikut dengan menghitung, memperkirakan, dan 
+        mengaplikasikan konsep numerasi. Gunakan konsep penjumlahan, pengurangan, 
+        perkalian, atau pembagian sesuai kebutuhan.</div>
+    <div class="judul">Soal-soal:</div>
+    <div>
+        <ol>
+            <li><div class="bagian2">Menghitung Sampah di Sekolah</div>
+                <ul type="circle">
+                    <li>Di kelas terdapat 30 siswa. Jika setiap siswa membuang satu sampah 
+                        sembarangan setiap hari, berapa banyak sampah yang menumpuk di 
+                        sekolah dalam satu minggu (7 hari)?</li>
+                        <div><textarea class="bagian3" id="jawaban1a" rows="10" cols="80"></textarea></div>
+                    <li>Jika setengah dari siswa membuang dua sampah sembarangan setiap hari, 
+                        berapa total sampah di sekolah dalam seminggu?</li>
+                        <div><textarea class="bagian3" id="jawaban1b" rows="10" cols="80"></textarea></div>
+                </ul>
+            </li>
+            <li><div class="bagian2">Jumlah Pohon di Lingkungan Rumah</div>
+                <ul type="circle">
+                    <li>Di lingkungan rumah, ada sekitar 20 rumah, dan setiap rumah rata-rata 
+                        memiliki 2 pohon. Berapa total pohon di lingkungan tersebut?</li>
+                        <div><textarea class="bagian3" id="jawaban2a" rows="10" cols="80"></textarea></div>
+                    <li>Jika 5 rumah menambah satu pohon lagi, berapa jumlah total pohon sekarang?</li>
+                    <div><textarea class="bagian3" id="jawaban2b" rows="10" cols="80"></textarea></div>
+                </ul>
+            </li>
+            <li><div class="bagian2">Estimasi Pengurangan Polusi</div>
+                <ul type="circle">
+                    <li>Teks menyebutkan bahwa kita bisa berjalan kaki atau bersepeda 
+                        untuk mengurangi polusi. Jika setiap siswa di kelas bersepeda 
+                        atau berjalan kaki 3 kali dalam seminggu daripada menggunakan 
+                        kendaraan bermotor, berapa kali dalam sebulan (4 minggu) mereka 
+                        mengurangi penggunaan kendaraan bermotor? (Anggap semua siswa 
+                        melakukan ini.</li>
+                        <div><textarea id="jawaban3" class="bagian3" rows="10" cols="80"></textarea></div>
+                </ul>
+            </li>
+            <li><div class="bagian2">Memperkirakan Jumlah Tanaman di Sekolah</div>
+                <ul type="circle">
+                    <li>Bapak penjaga sekolah menyiram sekitar 15 jenis tanaman 
+                        setiap hari. Jika ada rata-rata 4 tanaman per jenis, 
+                        berapa total tanaman di sekolah yang perlu disiram setiap hari?</li>
+                        <div><textarea class="bagian3" id="jawaban4" rows="10" cols="80"></textarea></div>
+                </ul>
+            </li>
+            <li><div class="bagian2">Menanam Pohon untuk Mengurangi Polusi</div>
+                <ul type="circle">
+                    <li>Menanam pohon adalah cara baik untuk menjaga lingkungan. 
+                        Jika setiap keluarga di lingkungan kita menanam satu pohon 
+                        di halaman rumahnya, dan ada 20 rumah di lingkungan tersebut, 
+                        berapa banyak pohon baru yang ditanam?</li>
+                        <div><textarea class="bagian3" id="jawaban5a" rows="10" cols="80"></textarea></div>
+                    <li>Bayangkan jika setiap keluarga menanam 2 pohon baru setiap tahun, 
+                        berapa banyak pohon yang akan tumbuh setelah 3 tahun?</li>
+                        <div><textarea class="bagian3" id="jawaban5b" rows="10" cols="80"></textarea></div>
+                </ul>
+            </li>
+            <li><div class="bagian2">Pengurangan Sampah dengan Kebiasaan Baik</div>
+                <ul type="circle">
+                    <li>Jika setiap siswa di kelas mulai membawa tempat makan sendiri 
+                        sehingga mengurangi satu sampah plastik setiap hari, berapa 
+                        banyak sampah yang dihemat oleh seluruh kelas dalam satu bulan 
+                        (anggap ada 20 hari belajar dalam sebulan)?</li>
+                        <div><textarea class="bagian3" id="jawaban6" rows="10" cols="80"></textarea></div>
+                </ul>
+            </li>
+            <li><div class="bagian2">Rata-rata Tanaman di Rumah</div>
+                <ul type="circle">
+                    <li>Di sepanjang jalan rumah Aini terdapat 20 rumah. Jika dari 
+                        20 rumah tersebut terdapat 80 tanaman, berapa rata-rata jumlah 
+                        tanaman per rumah?</li>
+                        <div><textarea id="jawaban7" class="bagian3" rows="10" cols="80"></textarea></div>
+                </ul>
+            </li>
+            <li><div class="bagian2">Menjaga Keseimbangan Ekosistem</div>
+                <ul type="circle">
+                    <li>Di lingkungan sekolah, terdapat banyak jenis hewan kecil seperti burung, 
+                        kupu-kupu, dan semut. Jika jumlah burung ada 10 ekor, kupu-kupu 12 ekor, 
+                        dan semut 50 ekor, berapa total hewan kecil tersebut?</li>
+                        <div><textarea id="jawaban8a" class="bagian3" rows="10" cols="80"></textarea></div>
+                    <li>Jika dalam sehari jumlah kupu-kupu bertambah 4 ekor dan semut bertambah 
+                        10 ekor, berapa total hewan kecil yang ada keesokan harinya?</li>
+                        <div><textarea id="jawaban8b" class="bagian3" rows="10" cols="80"></textarea></div>
+                </ul>
+            </li>
+        </ol>
+    </div>
+    <div><input type="button" value="Kirim" id="kirim1"></div>
+    <script type="module">
+        // Konfigurasi Firebase SDK
+        import {initializeApp} from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+        const firebaseConfig = {
+                apiKey: "AIzaSyCkgVmk75UTkos2y1Mrc7d3-sxShMfbeJQ",
+                authDomain: "natural-ethos-423713-e0.firebaseapp.com",
+                databaseURL: "https://natural-ethos-423713-e0-default-rtdb.firebaseio.com",
+                projectId: "natural-ethos-423713-e0",
+                storageBucket: "natural-ethos-423713-e0.firebasestorage.app",
+                messagingSenderId: "41833960811",
+                appId: "1:41833960811:web:6218d6ac2f3538c704e82e",
+        };
+
+        // Inisialisasi Firebase
+        const app = initializeApp(firebaseConfig);
+        import {getDatabase, set, get, update, remove, ref, child}
+            from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
+        const db=getDatabase()
+        var kirim1 = document.getElementById("kirim1")
+        kirim1.addEventListener("click",()=>{
+            var nama = document.getElementById("nama").value
+            var kelas = document.getElementById("kelas").value
+            var soal1a = document.getElementsByClassName("pertanyaan1a")
+            var soal1b = document.getElementsByClassName("pertanyaan1b")
+            var soal2a = document.getElementsByClassName("pertanyaan2a")
+            var soal2b = document.getElementsByClassName("pertanyaan2b")
+            var soal3 = document.getElementsByClassName("pertanyaan3")
+            var soal4 = document.getElementsByClassName("pertanyaan4")
+            var soal5a = document.getElementsByClassName("pertanyaan5a")
+            var soal5b = document.getElementsByClassName("pertanyaan5b")
+            var soal6 = document.getElementsByClassName("pertanyaan6")
+            var soal7 = document.getElementsByClassName("pertanyaan7")
+            var soal8a = document.getElementsByClassName("pertanyaan8a")
+            var soal8b = document.getElementsByClassName("pertanyaan8b")
+            set(ref(db, 'lingkunganNumerasi/' + nama), { 
+                nama:nama,
+                kelas:kelas,
+            })
+                .then(() => {
+                    alert('Data added successfully');
+                })
+                .catch((error) => {
+                console.error("Error adding data:", error);
+            });
+            set(ref(db, 'lingkungan1/' + nama+'/soal'), {
+                soal1a:soal1a.value,
+                soal1b:soal1b.value,
+                soal2a:soal2a.value,
+                soal2b:soal2b.value,
+                soal3:soal3.value,
+                soal4:soal4.value,
+                soal5a:soal5a.value,
+                soal5b:soal5b.value,
+                soal6:soal6.value,
+                soal7:soal7.value,
+                soal8a:soal8a.value,
+                soal8b:soal8b.value,
+            })
+                .then(() => {
+                    alert('Data added successfully');
+                })
+                .catch((error) => {
+                console.error("Error adding data:", error);
+            });
+        });
+</script>
+</body>
+</html>
+    '''
+    st.components.v1.html(tuliskan_html5,width=1000,height=3400)
